@@ -1,1 +1,8 @@
-<p>login works!</p>
+<!-- <label for="item-input">Add an item:</label>
+<input type="text" id="item-input" #newItem>
+<button type="button" (click)="addNewItem(newItem.value)">Add to parent's list</button> -->
+
+<label for="name">Name: </label>
+<input id="name" type="text" [formControl]="name">
+<p>Value: {{ name.value }}</p>
+<button type="button" (click)="updateName()">Update Name</button>

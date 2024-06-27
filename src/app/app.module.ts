@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { EventEmitter, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -10,7 +10,10 @@ import { DeleteProductComponent } from './pages/delete-product/delete-product.co
 import { RegisterComponent } from './pages/register/register.component';
 import { LoginComponent } from './pages/login/login.component';
 import{HttpClientModule} from '@angular/common/http';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, NgModel, ReactiveFormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
+import { HeaderComponent } from './pages/header/header.component';
+import { FooterComponent } from './pages/footer/footer.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,13 +22,17 @@ import { ReactiveFormsModule } from '@angular/forms';
     EditProductComponent,
     DeleteProductComponent,
     RegisterComponent,
-    LoginComponent
+
+    LoginComponent,
+     HeaderComponent,
+     FooterComponent
     
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
+    FormsModule,
     HttpClientModule
   ],
   providers: [],

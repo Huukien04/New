@@ -1,0 +1,40 @@
+/* navbar.component.css */
+
+/* Đảm bảo dropdown được định dạng giống với các phần tử khác trong navbar */
+.navbar .dropdown-menu {
+    background-color: #343a40; /* Màu nền giống với màu nền của navbar */
+  }
+  
+  .navbar .dropdown-item {
+    color: #fff; /* Màu chữ trắng */
+  }
+  
+  .navbar .dropdown-item:hover {
+    background-color: #495057; /* Màu nền khi hover */
+    color: #fff; /* Màu chữ khi hover */
+  }
+  
+
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+ 
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  

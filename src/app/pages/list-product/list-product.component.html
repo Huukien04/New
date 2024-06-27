@@ -9,15 +9,22 @@
           <div class="col-md-8">
             <div class="card-body">
               <h5 class="card-title">{{ product.name }}</h5>
+              <h3 class="card-text">{{product.category}}</h3>
               <p class="card-text">{{ product.description }}</p>
               <p class="card-text">Price: ${{ product.price }}</p>            
               Quantity available:  <input class="quantity" type="number" [step]="1" [value]="product.quantity"/>
             </div>
           </div>
         </div>
+        <a routerLink="/product/edit/{{ product.id }}" class="button fancy-button">
+          <i class="material-icons">edit</i>
+        </a>
         <button (click)="handleDelete(product.id)">Delete</button>
       </div>
     </div>
-    
+   
   </div>
+  <a routerLink='/product/add' class="button fancy-button">
+    <i class="material-icons">add</i>
+  </a>
 

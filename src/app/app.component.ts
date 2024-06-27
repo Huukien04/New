@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Web';
+  
+   item: any;
+  @Input () data_parent:string="du lieu cha";
+  items = ['item1', 'item2', 'item3', 'item4'];
+  addItem(newItem: string) {
+    this.items.push(newItem);   
+
+}
+receivedDataFromChild(event:any){
+  this.data_parent=event;
+}
 }

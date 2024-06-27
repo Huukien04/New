@@ -6,6 +6,7 @@ import { EditProductComponent } from './pages/edit-product/edit-product.componen
 import { DeleteProductComponent } from './pages/delete-product/delete-product.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { LoginComponent } from './pages/login/login.component';
+import { HeaderComponent } from './pages/header/header.component';
 
 const routes: Routes = [
   {
@@ -17,7 +18,7 @@ const routes: Routes = [
     component: AddProductComponent
   },
   {
-    path: 'product/edit',
+    path: 'product/edit/:id',
     component: EditProductComponent
   },
   {
@@ -31,6 +32,14 @@ const routes: Routes = [
   {
     path: 'product/login',
     component: LoginComponent
+  },
+  {
+    path: 'category/:id',
+    component: ListProductComponent
+  },
+  {
+    path: '',
+    component: ListProductComponent
   }
 ];
 
